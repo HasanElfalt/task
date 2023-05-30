@@ -8,7 +8,7 @@ class Movie {
   double? popularity;
   String? releaseDate;
   bool? video;
-  double? voteAverage;
+  num? voteAverage;
   int? voteCount;
 
   Movie(
@@ -34,7 +34,7 @@ class Movie {
     popularity = json['popularity'];
     releaseDate = json['release_date'];
     video = json['video'];
-    //voteAverage = json['vote_average'];
+    voteAverage = json['vote_average']??5;
     voteCount = json['vote_count'];
   }
 }
